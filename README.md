@@ -1,1 +1,1 @@
-zmod.org
+zmod

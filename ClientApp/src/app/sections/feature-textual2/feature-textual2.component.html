@@ -1,0 +1,15 @@
+<section class="section {{cssClass}}">
+  <div class="container">
+    <header class="section-header">
+      <h2>{{dataSource.heading}}</h2>
+      <p class="lead">{{dataSource.description}}</p>
+    </header>
+    <div class="row text-center">
+      <div class="col-md-6 col-xl-4 feature-1" *ngFor="let element of dataSource.list">
+        <p class="feature-icon"><img class="img-fluid" src="{{element.image_url}}" /></p>
+        <h5>{{element.heading}}</h5>
+        <p class="text-muted">{{element.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>

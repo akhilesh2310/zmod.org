@@ -1,0 +1,16 @@
+<section class="section {{cssClass}}">
+  <div class="container">
+    <header class="section-header">
+      <h2>{{dataSource.heading}}</h2>
+      <p class="lead">{{dataSource.description}}</p>
+    </header>
+    <div class="row text-center">
+      <div class="col-md-6 col-xl-4" *ngFor="let element of dataSource.list">
+        <p class="feature-icon text-primary"><span class="{{element.icon}}"></span></p>
+        <h5 *ngIf="!element?.link">{{element.heading}}</h5>
+        <h5 *ngIf="element?.link"><a [href]="element.link" target="_blank">{{element.heading}}</a></h5>
+        <p>{{element.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>

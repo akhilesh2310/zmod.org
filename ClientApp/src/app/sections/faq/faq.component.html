@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="container">
+    <header class="section-header">
+      <h2>Frequently Asked Questions</h2>
+      <p class="lead">Got a question? We've got answers. If you have some other questions, see our support center.</p>
+    </header>
+    <div class="col-md-10 mx-auto">
+      <ngb-accordion #acc="ngbAccordion" [closeOthers]="true">
+        <ngb-panel *ngFor="let item of dataSource; index as i" id="static-{{i}}" title="{{ item.question }}">
+          <ng-template ngbPanelContent> {{ item.answer }}
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </div>
+</section>

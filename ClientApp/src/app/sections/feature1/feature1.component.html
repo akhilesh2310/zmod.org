@@ -1,0 +1,20 @@
+<section class="section {{cssClass}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 mr-auto text-center text-lg-left">
+        <h2>{{dataSource.heading}}</h2>
+        <p class="lead">{{dataSource.description}}</p>
+        <div class="row ">
+          <div class="col-md-6 my-3" *ngFor="let element of dataSource.list">
+            <span class="{{element.icon}} "></span>
+            <h6 class="text-uppercase mb-3">{{element.heading}}</h6>
+            <p class="fs-14">{{element.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 align-self-center">
+        <img class="img-fluid" src="{{dataSource.image_url}}" alt="...">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+<footer class="footer pt-7 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-4">
+        <h5 class="mb-3">ML Workbench</h5>
+        <p>For experts or beginner, ML Workbench is an end-to-end platform that makes it easy to build and deploy AI/ML
+          models.
+        </p>
+        <p class="small nav">
+          <a class="nav-link pl-0 pr-2" href="https://www.softwareag.com/" target="_blank">© 2019 Software AG</a> | All rights reserved.
+        </p>
+      </div>
+
+      <div class="col-6 col-md-3 col-xl-2">
+        <h5 class="mb-3 ml-3">Product</h5>
+        <div class="nav flex-column">
+          <a class="nav-link"  [routerLink]="['/about']">About </a>
+          <a class="nav-link" [routerLink]="['/learn']">Learn</a>
+          <a hidden class="nav-link" [routerLink]="['/architecture']">Architecture</a>
+          <a class="nav-link" [routerLink]="['/community']">Community</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-6 col-xl-2">
+        <h5 class="mb-3 ml-3">Support</h5>
+        <div class="nav flex-column">
+          <a class="nav-link" [routerLink]="['/faq']" hidden>FAQ</a>
+          <a class="nav-link" [routerLink]="['/terms']" hidden>Terms & Condition</a>
+          <a class="nav-link" [routerLink]="['/privacy']" hidden>Privacy Policy</a>
+          <a class="nav-link"  [routerLink]="['/contact']">Contact </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 text-xs-center" hidden>
+        <h5 class="mb-3">Join our mailing list</h5>
+        <form>
+          <div class="input-group">
+            <input type="text" name="EMAIL" class="form-control" placeholder="Email address">
+            <div class="input-group-append">
+              <button class="btn btn-success text-white" type="button" id="button-addon2">Subscribe</button>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="social mt-4" hidden>
+          <a class="mr-2 border px-2 py-1 text-secondary" href="#">
+            <span class="fa fa-facebook"></span>
+          </a>
+          <a class="mr-2 border px-2 py-1 text-secondary" href="#">
+            <span class="fa fa-twitter"></span>
+          </a>
+          <a class="mr-2 border px-2 py-1 text-secondary" href="#">
+            <span class="fa fa-youtube"></span>
+          </a>
+          <a class="mr-2 border px-2 py-1 text-secondary" href="#">
+            <span class="fa fa-instagram"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-round btn-sm btn-primary scroll-top position-fixed" (click)="scrollToTopSection()" [ngClass]="{'show-scroll': showScroll}">
+    <i class="fa fa-angle-up"></i>
+  </button>
+</footer>

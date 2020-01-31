@@ -1,0 +1,30 @@
+<section class="section">
+  <div class="container">
+    <header class="section-header text-muted">
+      <h2 class="text-dark py-4">{{dataSource.heading}}</h2>
+      <p class="lead">{{dataSource.description}}</p>
+    </header>
+    <div class="row text-center">
+      <div class="col-md-4 box-shadow mb-5 rounded p-3" *ngFor="let list of dataSource.list">
+        <div class="border">
+          <p class="border-bottom py-3 text-muted bg-light">{{list.heading}}</p>
+          <br>
+          <h2 class="price" style="font: size 50;">{{list.subHeading}}</h2>
+          <p class="small"></p>
+
+          <div class="text-muted">
+            <small>{{list.text}}</small><br>
+            <p class="small"></p>
+            <pre>{{list.description1}}</pre>
+            <pre>{{list.description2}}</pre>
+            <pre>{{list.description3}}</pre>
+          </div>
+          <br>
+          <p class="text-center py-3">
+            <a class="btn btn-primary" href="#">{{list.buttondesc}}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

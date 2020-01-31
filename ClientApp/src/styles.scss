@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/font-awesome/scss/font-awesome';
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: 'Avenir-Black';
+        line-height: 1;
+        color: $white;
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 14px;
+        font-weight: 400;
+        font-family: 'Avenir-Medium';
+        line-height: 1;
+        margin-bottom: 0;
+        color: $white;
+    }
+}
+
+.navbar-mobile {
+    align-items: center;
+    width: 80%;
+    display: flex;
+}
+
+.section {
+    position: relative;
+    border-bottom: none;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &.bg-repeat {
+        background-repeat: repeat !important;
+        background-size: auto !important;
+    }
+    .section-header {
+        text-align: center;
+        margin: 0 auto 50px;
+        small {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.75px;
+            margin-bottom: 1.5rem;
+            word-spacing: 2px;
+            color: rgba(153, 153, 153, 0.6);
+            p {
+                font-size: 1.0625rem;
+            }
+        }
+    }
+}
+
+.w-250 {
+    width: 250px;
+}
+
+.w-200 {
+    width: 200px;
+}
+
+.btn-round {
+    border-radius: 10rem;
+}

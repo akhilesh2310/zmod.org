@@ -1,0 +1,22 @@
+<section class="section {{cssClass}}">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mx-auto">
+        <h2>{{dataSource.heading}}</h2>
+        <p class="lead mb-5">{{dataSource.description}}</p>
+        <div class="row" *ngFor="let element of dataSource.list">
+          <div class="col">
+            <p>
+              <span class="{{element.icon}} mr-3"></span> {{element.heading}}</p>
+          </div>
+        </div>
+        <p class="mt-3" *ngIf="dataSource?.btn?.text">
+          <a class="text-uppercase" [routerLink]="dataSource.btn.link">{{dataSource.btn.text}}</a>
+        </p>
+      </div>
+      <div class="col-lg-6 align-self-center order-md-first">
+        <img class="img-fluid" src="{{dataSource.image_url}}" alt="...">
+      </div>
+    </div>
+  </div>
+</section>

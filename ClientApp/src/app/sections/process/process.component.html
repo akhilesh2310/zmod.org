@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="container">
+    <header class="section-header">
+      <h2>{{dataSource.heading}}</h2>
+      <p class="lead">{{dataSource.description}}</p>
+    </header>
+
+    <div class="row align-items-center pb-5" *ngFor="let list of dataSource.list; let i = index;">
+      <ng-template [ngIf]="i%2===0"></ng-template>
+      <div class="col-md-6" [ngClass]="{'order-md-last': (i%2===1)}">
+        <img class="img-fluid" src={{list.image_url}}>
+      </div>
+      <div class="col-md-5 text-md-left text-center" [ngClass]="{'order-md-last': (i%2===0)}">
+        <p class="lead-9 text-secondary">{{list.heading}}</p>
+        <h3>{{list.subHeading}}</h3>
+        <p>{{list.description}}</p>
+      </div>
+
+    </div>
+  </div>
+</section>

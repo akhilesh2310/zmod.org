@@ -1,0 +1,23 @@
+<section class="section {{cssClass}}">
+  <div class="container">
+    <header class="section-header">
+      <h2>{{dataSource.heading}}</h2>
+      <p class="lead">{{dataSource.description}}</p>
+    </header>
+    <div class="row">
+      <div class="col-lg-4 text-center mb-5" *ngFor="let element of dataSource.list">
+        <div class="card border shadow" [routerLink]="['/learn', element.id]">
+          <div class="embed-responsive embed-responsive-4by3 mb-4">
+            <iframe class="embed-responsive-item" [src]="element.video_url | safe:'resourceUrl'" frameborder="0"
+              allowfullscreen target='_top'></iframe>
+          </div>
+          <p class="small text-black-50 text-uppercase mb-0" hidden>{{element.subheading}}</p>
+          <h6 class="pb-4 pt-2">{{element.description}}</h6>
+        </div>
+      </div>
+    </div>
+    <div class="text-center" *ngIf="dataSource?.btn?.text">
+      <a class="btn btn-outline-primary px-5" [routerLink]="dataSource?.btn?.link">{{dataSource?.btn?.text}}</a>
+    </div>
+  </div>
+</section>

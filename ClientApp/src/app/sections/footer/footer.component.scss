@@ -1,0 +1,22 @@
+.footer {
+    background: #414042;
+    color: #ababab;
+    h5 {
+        color: #ffff;
+    }
+    .nav {
+        .nav-link {
+            color: #ababab;
+            padding: 0.1rem 1rem;
+        }
+    }
+}
+.scroll-top {
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+}
+
+.show-scroll {
+    opacity: 1;
+}

@@ -1,0 +1,21 @@
+<section class="section bg-gray">
+  <div class="container">
+    <h2 class="text-center">{{dataSource?.heading}}</h2>
+    <div class="row gap-y mt-8">
+      <div class="col-lg-4 d-none d-lg-flex mb-5" *ngFor="let element of dataSource.list">
+        <div class="card border shadow d-block">
+          <a class="card-img" href="#" [routerLink]="['/blog', element.url]"><img class="card-img-top" [src]="element.thumbnail" alt="{{element.thumbnail_alt_text}}"></a>
+          <div class="card-body">
+            <h5 class="card-title"><a [routerLink]="['/blog', element.url]"
+                class="d-block text-truncate" [innerHtml]="element.title"></a></h5>
+            <p>{{element.short_description}}</p>
+            <a class="fw-600 fs-12" [routerLink]="['/blog', element.url]">Read more <i
+                class="ti-angle-right fs-7 pl-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <p class="text-center" hidden><a href="#">Browse all blog posts</a></p>
+  </div>
+</section>

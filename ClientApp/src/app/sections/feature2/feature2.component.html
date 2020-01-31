@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5 mr-auto">
+        <h3>{{dataSource.heading}}</h3>
+        <p>{{dataSource.description}}</p>
+        <a *ngIf="dataSource.url" href="{{dataSource.url}}" class="text-uppercase">Read More</a>
+      </div>
+      <div class="col-md-6 mt-7 mt-md-0">
+        <img class="img-fluid" src={{dataSource.image_url}}>
+      </div>
+    </div>
+  </div>
+</section>
